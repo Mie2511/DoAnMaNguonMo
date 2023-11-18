@@ -1,0 +1,72 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Máy chủ: 127.0.0.1
+-- Thời gian đã tạo: Th10 17, 2023 lúc 06:17 PM
+-- Phiên bản máy phục vụ: 10.4.28-MariaDB
+-- Phiên bản PHP: 8.1.17
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Cơ sở dữ liệu: `admin`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `qtv`
+--
+
+CREATE TABLE `qtv` (
+  `id` int(11) NOT NULL,
+  `name` text CHARACTER SET utf8 COLLATE utf8_vietnamese_ci NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `phone` varchar(10) NOT NULL,
+  `photo` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `qtv`
+--
+
+INSERT INTO `qtv` (`id`, `name`, `email`, `phone`, `photo`) VALUES
+(12, 'Vũ Hoài Thu', 'vuthu09834@gmail.com', '123231232', 'uploads/372Q.gif'),
+(13, 'Lê Hoàng Viêt', 'vietlh@ntu.edu.vn', '1212121', 'uploads/367431341_1248002609247915_4997436011218158937_n.jpg'),
+(14, 'Phạm Hoàng Long', 'longpham@email.com', '02344738', 'uploads/person_4.jpg'),
+(15, 'Dương Thị Thanh Trúc', 'chuppa@gmail.com', '038483624', 'uploads/1.jpg'),
+(16, 'Ngọc My', 'vuthu09834@gmail.com', '123231232', 'uploads/anh-meo-de-thuong-1.jpg');
+
+--
+-- Chỉ mục cho các bảng đã đổ
+--
+
+--
+-- Chỉ mục cho bảng `qtv`
+--
+ALTER TABLE `qtv`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT cho các bảng đã đổ
+--
+
+--
+-- AUTO_INCREMENT cho bảng `qtv`
+--
+ALTER TABLE `qtv`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
